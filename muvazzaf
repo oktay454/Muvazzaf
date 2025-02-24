@@ -206,7 +206,7 @@ function Preliminary()
 			CheckLivesViaWinRM > "${MACHINE_WORK_DIR}/output" 2>&1
 			local EXIT_CODE=${?}
 			# This operation is required to clear the DOS-CRLF output
-			dos2unix < "${MACHINE_WORK_DIR}/output" | sponge "${MACHINE_WORK_DIR}/output"
+			dos2unix "${MACHINE_WORK_DIR}/output"
 			;;
 		linux)
 			echo "${IP}" > "${MACHINE_WORK_DIR}/output"
